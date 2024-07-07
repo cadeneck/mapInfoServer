@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const InteractionSchema = new mongoose.Schema({
+  userId: String,
   timestamp: Date,
   actionType: String,
   chargingStation: String,
@@ -9,5 +10,4 @@ const InteractionSchema = new mongoose.Schema({
   map: Number
 });
 
-const Interaction = mongoose.model('Interaction', InteractionSchema);
-module.exports = Interaction;
+module.exports = mongoose.model('Interaction', InteractionSchema);
